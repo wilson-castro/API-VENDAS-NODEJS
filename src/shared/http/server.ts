@@ -29,5 +29,6 @@ app.use(
 );
 
 app.listen(3333, () => {
+  // eslint-disable-next-line no-console
   console.log('Server Started on port 3333 🏆');
 });
