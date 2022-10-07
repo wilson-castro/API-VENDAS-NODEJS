@@ -1,4 +1,4 @@
-import { json, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import CreateUserService from '../services/CreateUserService';
 import { ListUserService } from '../services/ListUserService';
 
