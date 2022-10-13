@@ -1,6 +1,5 @@
-import { celebrate, Segments } from 'celebrate';
+import { celebrate, Joi, Segments } from 'celebrate';
 import { Router } from 'express';
-import Joi from 'joi';
 import SessionsController from '../controllers/SessionsController';
 
 const sessionsRouter = Router();
@@ -8,6 +7,11 @@ const sessionController = new SessionsController();
 
 sessionsRouter.post(
   '/',
+  (request, response, next) => {
+    console.log(request.body);
+
+    return next();
+  },
   celebrate({
     [Segments.BODY]: {
       email: Joi.string().email().required(),
